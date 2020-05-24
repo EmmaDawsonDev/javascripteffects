@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Emma Dawson - Web Developer</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=IM+Fell+French+Canon+SC&family=Quicksand&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    
+<!--Navigation section-->   
+<nav>
+    
+    <ul class="nav-links">
+        <li><a href="#about-me" class="nav-link">About Me</a></li>
+        <li><a href="#projects" class="nav-link">Projects</a></li>
+        <li><a href="#contact" class="nav-link">Contact</a></li>
+    </ul>
+    <div class="hamburger">
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+    </div>
+    
+    
+
+
+</nav>
+
+
+<!--Header section--> 
+<header>
+    <h1>Emma Dawson</h1>
+    <hr>
+    <h2>Web Developer</h2>
+</header>
+
+<!--About me section--> 
+<div id="about-me">
+    <div class="box-container">
+        <h3>About Me</h3>
+<img src="images/photoEmmaDawson.JPG" alt="Picture of Emma Dawson">
+<p>Hello! My name is Emma Dawson and I am a Web Developer <em>in training</em>. I love making websites using HTML, CSS and Javascript.
+    I started learning to make websites properly in 2019, although I have made a few hobby websites long ago, when GeoCities was still a thing.
+</p>
+<p>In my spare time I also love to paint, take long walks in the forest and potter in the garden when the weather allows.</p>
+</div>
+</div>
+
+<!--Projects section--> 
+<div id="projects" class="flex-container">
+<div class="row">
+<!--Sött of Elegant section-->   
+    <div id="project1" class="both-projects">
+        <a href="https://emmalearnscode.github.io/sottochelegant" target="_blank">
+            <img src="images/sottochelegant.jpg" alt="Picture of website for local bakery" class="link-img"></a>
+        
+        <h3>Bakery Website</h3>
+        <p>This website was designed for a local bakery in Sweden. It is made entirely using HTML and CSS.
+            It has a consistent design throughout and is accessible on all major browsers and mobile devices.
+        </p>
+        <a href="https://emmalearnscode.github.io/sottochelegant/" target="_blank" class="project-btn">View project</a>
+        <a href="https://github.com/emmalearnscode/sottochelegant" target="_blank" class="project-btn">Behind the scenes</a>
+    </div>
+
+<!--Tapas section--> 
+    <div id="project2" class="both-projects">
+        <a href="tapas.html"><img src="images/tapas.jpg" alt="Picture of website for tapas restaurant" class="link-img"></a>
+        
+        <h3>Tapas Website</h3>
+        <p>This website was made following Javascript30 tutorial 15 - Local Storage. 
+            The page is made using HTML, CSS and Javascript.
+            A product like this could be used by a restaurant to collect and fulfil orders.
+            The items can be added at the time of ordering and checked off when the order is completed.
+            It would be a good way to keep track of workflow.
+            It could also be used in other settings as well, such as creating To Do lists.
+        </p>
+        <a href="tapas.html" class="project-btn">View project</a>
+        <a href="buildingprocess.html" class="project-btn">Building the project</a>
+        <a href="tapasbehindthescenes.html" class="project-btn">The DOM</a>
+</div>
+</div>
+<div class="row">
+<!--Image slider section-->
+<div id="project3" class="both-projects">
+    <a href="imageslider.html"><img src="images/imageslider.jpg" alt="Picture of image slider application" class="link-img"></a>
+    <h3>Image Slider</h3>
+    <p>This site is an example of an image slider/carousel written with Javascript. 
+        This would be a perfect way to display many photos as a slideshow, or can even be used as a carousel to show customer testamonials for a product.
+        They are a good way to show many large images on a website.
+     </p>
+    <a href="imageslider.html" class="project-btn">View project</a>
+    <a href="JSeffects.html" class="project-btn">Building the project</a>
+</div>
+
+<!--Lightbox section-->
+<div id="project4" class="both-projects">
+    <a href="lightbox.html"><img src="images/lightboxthumb.jpg" alt="Picture of lightbox application" class="link-img"></a>
+    <h3>Lightbox</h3>
+    <p>This site is an example of an image lightbox written with Javascript. 
+        This is a great way to display many small images at once which can then be magnified when clicked on.
+        This would be particularly useful in e-commerce stores where you may want several product theumbnails to be shown at once with the ability to enlarge one image at a time.
+        It is also a fantastic way for photographers to show off their work.
+    </p>
+    <a href="lightbox.html" class="project-btn">View project</a>
+    <a href="JSeffects.html" class="project-btn">Building the project</a>
+</div>
+</div>
+
+
+</div>
+
+<!--Contact me section--> 
+<div id="contact">
+    <div class="box-container"> 
+<h3>Contact Me</h3>
+<form>      
+    <input name="name" type="text" class="feedback-input" placeholder="Name" />   
+    <input name="email" type="text" class="feedback-input" placeholder="Email" />
+    <textarea name="text" class="feedback-input" placeholder="Comment"></textarea>
+    <input type="submit" value="SUBMIT"/>
+  </form>
+</div>
+</div>
+
+<!--Footer section--> 
+
+<footer>
+    <p>&copy; Emma Dawson 2020</p>
+</footer>
+
+<!--Link to scripts section--> 
+
+    <script src="scripts.js"></script>
+</body>
+</html>

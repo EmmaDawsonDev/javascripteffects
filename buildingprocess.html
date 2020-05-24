@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Building the website</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=IM+Fell+French+Canon+SC&family=Quicksand&display=swap" rel="stylesheet">
+</head>
+<body>
+  <!--Navigation section-->   
+<nav>
+
+    <ul class="nav-links">
+        <li><a href="index.html" class="nav-link">Home</a></li>
+        <li><a href="#my-process" class="nav-link">My process</a></li>
+        <li><a href="#process-video" class="nav-link">Process video</a></li>
+    </ul>
+    <div class="hamburger">
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+    </div>
+
+    
+    
+    
+</nav>
+    
+    
+    <!--Header section--> 
+    <header>
+        <h1>Building the <br> Tapas site</h1>
+        
+    </header>  
+
+    <!--Step by step instructions of my process with pictures-->
+
+    <div id="my-process">
+        <h3>How I built the Tapas site - step for step</h3>
+        
+            <div class="instructions-list">
+        <ol>
+            <li><strong>Make variables for all the HTML elements you want to target with Javascript.</strong> <br>
+                Do this by using document.querySelector to target the element by class, tag name or id. 
+                In this example the variable 'addItems' is a constant which uses a querySelector to target the HTML element with class 'add-items'.
+                <span class="JS-image" ><img id="JS-image1" src="images/JSvariables.jpg" alt="Variables written with Javascript"></span>
+            </li>
+
+            <li> <strong> Create a function that adds items written in the input box to the tapas list. </strong> <br>
+                First prevent default behaviour which causes page reload by using event.preventDefault.
+                Then create a variable called 'text' which selects the inputted text value from the form. 
+                Pass this text into an object called item, with another key-value pair of done: false. This means the checkbox is automatically set to false.
+                Push the item into the items array.
+                Populate the list and add the item to the local storage so that it is remembered.
+                <span class="JS-image"><img id="JS-image2" src="images/function-addItem.jpg" alt="Javascript function for adding an item to the list"></span></li>
+            
+            <li><strong> Create a function that changes the innerHTML and adds our items so they are visible to the list user.</strong> <br>
+                Once the items are added to the list using the 'addItem' function we need to add them to the inner HTML so that they are visible to the user.
+                To do this we create a function called populateList which takes two parameters: plates = [] and platesList.
+                We then add a list item to the inner HTML by using populateList.innerHTML.
+                We use a ternery operation to check whether the item is checked or unchecked so that it shows properly on screen.
+                <span class="JS-image"><img id="JS-image3" src="images/function-populateList.jpg" alt="Javascript function for populating the list"></span>
+            </li>
+            
+            <li> <strong>Create a function which allows you to check or uncheck chosen items on the list.</strong><br>  
+                This function will run when the checkbox is clicked. 
+                Therefore it is inportant to first tell the function not to run if an area outside of the checkbox input is clicked.
+                Using the following code allows the box to check if unchecked and uncheck if already checked.
+                This is then passed into populateList and the local storage is updated with the new preferences.
+                <span class="JS-image"> <img id="JS-image4" src="images/function-toggleDone.jpg" alt="Javascript function for checking/unchecking single checkboxes"></span>
+            </li>
+
+            <li><strong>Create a function which allows all checkboxes to be checked or unchecked at once. </strong><br>
+                This function takes an argument of true or false which will either check or uncheck all boxes respectively.
+                The function iterates over the items array and changes the check state.
+                It then populates the list and adds the information to the local storage.
+                <span class="JS-image"> <img id="JS-image5" src="images/function-toggleAll.jpg" alt="Javascript function for toggle all checkboxes on or off"></span>
+            </li>
+            <li><strong> Create a function which allows the entire list to be reset.</strong><br>
+                In order to clear the entire form and everything stored in it we need to empty the local storage of its stored data.
+                To do this we use the clear() method on the local storage.
+                We then reload the page to show the changes made to the local storage.
+                <span class="JS-image"><img id="JS-image6" src="images/function-resetForm.jpg" alt="Javascript function to reset the list"></span>
+            </li>
+            <li><strong>Add event listeners to each variable and trigger one of the previous functions when the event occurs.</strong><br>
+                Finally, in order for the functions to have an effect we need to tell Javascript when to run the functions.
+                We do this by adding event listeners to each of the variables.
+                Most of the event listeners are clicks which then trigger a function to run.
+                In this example, the 'addItems' variable is listening for 'submit' events.
+                This means either a mouse click or that the Enter button is pressed.
+                When a 'submit' event is triggered the 'addItem' function is triggered and the code within it executes.
+                <span class="JS-image"><img id="JS-image7" src="images/addEventListeners.jpg" alt="Javascript for adding event listeners to HTML elements"></span>
+            </li>
+        </ol>
+    </div>
+</div>
+
+<!--Video of me making the tapas website-->
+    <div id="process-video">
+        <h3>Process Video</h3>
+        <video  controls>
+            <source src="videos/project15localStorage.MP4" type="video/mp4">
+            
+          Your browser does not support the video tag.
+          </video>
+    </div>
+
+    <!--Footer section--> 
+
+<footer>
+    <p>&copy; Emma Dawson 2020</p>
+</footer>
+
+<!--Link to scripts section--> 
+
+    <script src="scripts.js"></script>
+</body>
+</html>

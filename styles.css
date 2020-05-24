@@ -1,0 +1,746 @@
+* {
+    margin: 0;
+}
+body {
+    margin: 0;
+    padding: 0;
+}
+
+/* Navigation bar */
+nav {
+    background-color: #3175a5;
+    min-height: 10vh;
+    display:flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.nav-links {
+    display: flex;
+    width: 60%;
+    margin-left: auto;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.nav-links li {
+    list-style: none;
+}
+
+.nav-link {
+    font-family: 'Quicksand', sans-serif;
+    font-size: 1.2rem;
+    text-decoration: none;
+    color: #effffb;
+}
+
+.hamburger {
+    display: none;
+}
+
+.line {
+    background-color: #effffb;
+    width: 30px;
+    height: 3px;
+    margin: 2px;
+    margin-right: 20px;
+    border-radius: 25%;
+    
+}
+
+@media screen and (max-width: 768px) {
+    body {
+        overflow-x: hidden;
+    }
+    
+    .nav-links {
+        position: absolute;
+        right: 0px;
+        height: 100vh;
+        top: 0vh;
+        background-color: #3175a5;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 50%;
+        transform: translateX(100%);
+        transition: transform 0.5s ease-in;
+    }
+
+    .hamburger {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        justify-content: center;
+        width: 100%;
+        cursor: pointer;
+        z-index: 2;
+    }
+}
+
+.nav-active {
+    transform: translateX(0%);
+}
+
+
+
+/* Header section */
+header {
+    background-image: url('header-img.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 510px;
+    width: 100%;
+    position: absolute;
+    z-index: -2;
+   
+}
+
+
+
+h1, h2 {
+    text-align: center;
+    font-family: 'IM Fell French Canon SC', serif;
+    color: #effffb;
+}
+
+h1 {
+    padding-top: 150px;
+    font-size: 3.5rem;
+}
+
+h2 {
+    font-size: 2.5rem;
+    
+}
+hr {
+    width: 20%; 
+    margin: 30px auto;
+    
+}
+
+/*Media queries for header section*/
+@media only screen and (max-width: 1160px) {
+    header {
+      height: 470px;
+    }
+    h1 {
+        padding-top: 100px;
+        font-size: 3rem
+    }
+    h2 {
+    font-size: 2rem;
+    }
+}
+
+  @media only screen and (max-width: 1090px) {
+    header {
+      height: 440px;
+    }
+    h1 {
+        padding-top: 100px;
+        font-size: 3rem
+    }
+    h2 {
+    font-size: 2rem;
+    }
+  }
+
+  @media only screen and (max-width: 1000px) {
+    header {
+      height: 400px;
+    }
+    h1 {
+        padding-top: 100px;
+        font-size: 2.8rem
+    }
+    h2 {
+    font-size: 1.8rem;
+    }
+    hr {
+        width: 18%;  
+    }
+  }
+
+  @media only screen and (max-width: 910px) {
+    header {
+      height: 350px;
+    }
+    h1 {
+        padding-top: 80px;
+        font-size: 2.4rem
+    }
+    h2 {
+    font-size: 1.6rem;
+    }
+    hr {
+        width: 14%;  
+    }
+  }
+
+  @media only screen and (max-width: 800px) {
+    header {
+      height: 300px;
+    }
+    h1 {
+        padding-top: 70px;
+        font-size: 2.2rem
+    }
+    h2 {
+    font-size: 1.4rem;
+    }
+    hr {
+        width: 12%;  
+    }
+  }
+
+  @media only screen and (max-width: 690px) {
+    header {
+      height: 250px;
+    }
+    h1 {
+        padding-top: 50px;
+        font-size: 2rem
+    }
+    h2 {
+    
+    font-size: 1.3rem;
+    }
+    hr {
+        width: 10%;  
+    }
+  }
+
+  @media only screen and (max-width: 580px) {
+    header {
+      height: 200px;
+    }
+    h1 {
+        padding-top: 40px;
+        font-size: 1.6rem
+    }
+    h2 {
+    font-size: 1.2rem;
+    }
+    hr {
+        width: 10%; 
+        margin: 20px auto;
+         
+    }
+}
+
+@media only screen and (max-width: 420px) {
+    header {
+      height: 150px;
+    }
+    h1 {
+        padding-top: 35px;
+        font-size: 1.1rem
+    }
+    h2 {
+    font-size: 1rem;
+    line-height: 0.8; 
+    }
+    hr {
+        width: 10%;
+        margin: 10px auto; 
+        
+    }
+}
+/* About me section */
+#about-me {
+    min-height: 730px;
+    background-color: #effffb;
+    margin-top: 500px;
+    padding-top: 50px;
+    text-align: center;
+}
+
+
+#about-me img {
+    height: 200px;
+    box-shadow: 2px 2px 5px 0px rgba(50, 50, 50, 0.45), -2px -2px 5px 0px rgba(50, 50, 50, 0.45);
+    border-radius: 50%;
+    margin-top: 10px;
+    margin-bottom: 30px;
+}
+
+
+
+p {
+    font-family: 'Quicksand', sans-serif;
+    max-width: 500px;
+    margin: 0 auto;
+    line-height: 1.5;
+    font-size: 1.2rem;
+    color: #272727;
+    padding-bottom: 20px;
+}
+
+@media only screen and (max-width: 900px) {
+    p {
+        font-size: 1rem;
+    }
+}
+
+
+
+/* Projects section */
+#projects {
+    min-height: 800px;
+    background-color: #50d890;
+    
+}
+
+
+
+.row {
+    display:flex;
+    flex-wrap: wrap;
+    min-height: 700px;
+}
+
+.both-projects {
+    flex: 1;
+    min-height: 700px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    margin-left: 3%;
+    margin-right: 3%;
+    padding-top: 50px;
+    text-align: center;
+    box-shadow: 2px 2px 5px 0px rgba(50, 50, 50, 0.45), -2px -2px 5px 0px rgba(50, 50, 50, 0.45);;
+    background-color: #effffb;
+}
+
+.link-img {
+    margin-bottom: 40px;
+}
+
+@media only screen and (max-width: 400px) {
+    .both-projects{
+        width: 95%;
+    }
+}
+h3 {
+    font-family: 'IM Fell French Canon SC', serif;
+    font-size: 2rem;
+    color: #272727;
+    text-align: center;
+    padding-bottom: 30px;
+}
+
+@media only screen and (max-width: 400px) {
+    h3{
+        font-size: 1.5rem;
+    }
+}
+
+
+.both-projects p {
+    padding-bottom: 50px;
+    max-width: 80%;
+}
+
+@media only screen and (max-width: 900px) {
+    .both-projects p {
+        font-size: 1rem;
+    }
+}
+
+.both-projects img {
+    box-shadow: 2px 2px 5px 0px rgba(50, 50, 50, 0.45), -2px -2px 5px 0px rgba(50, 50, 50, 0.45);;
+}
+
+@media only screen and (max-width: 420px) {
+    .both-projects img{
+        width: 300px;
+        
+    }
+    
+}
+
+.both-projects img:hover {
+    transform: scale(1.1);
+}
+
+.project-btn {
+    margin-top: 50px;
+    padding: 10px;
+    background-color: #3175a5;
+    color: #effffb;
+    text-decoration: none;
+    font-family: 'Quicksand', sans-serif;
+    font-size: 1.2rem;
+    border-radius:5px;
+  border:0;
+}
+
+@media only screen and (max-width: 1080px){
+    .project-btn {
+        display: block;
+        margin: 10px;
+    }
+}
+
+@media only screen and (max-width: 900px){
+    .project-btn {
+        font-size: 1rem;
+    }
+}
+
+/* Contacts section */
+#contact {
+    min-height: 500px;
+    background-color: #effffb;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    
+}
+
+.box-container {
+    padding-top: 50px;
+    padding-bottom: 50px;
+    width: 600px;
+    margin: 0 auto;
+    box-shadow: 2px 2px 5px 0px rgba(50, 50, 50, 0.45), -2px -2px 5px 0px rgba(50, 50, 50, 0.45);
+}
+
+@media only screen and (max-width: 768px){
+    .box-container {
+        width: 95%;
+    }
+}
+
+
+form { 
+    max-width:420px; 
+    margin:50px auto; 
+}
+
+@media only screen and (max-width: 768px){
+    form {
+        width: 95%;
+    }
+}
+
+.feedback-input {
+  color: #272727;
+  font-family: 'Quicksand', sans-serif;
+  font-weight:500;
+  font-size: 1rem;
+  border-radius: 5px;
+  line-height: 22px;
+  background-color: transparent;
+  border:2px solid #3175a5;
+  transition: all 0.3s;
+  padding: 13px;
+  margin-bottom: 15px;
+  width:100%;
+  box-sizing: border-box;
+  outline:0;
+}
+
+.feedback-input:focus { border:2px solid #3175a5; }
+
+textarea {
+  height: 150px;
+  line-height: 150%;
+  resize:vertical;
+}
+
+[type="submit"] {
+  font-family: 'Quicksand', sans-serif;
+  width: 100%;
+  background:#3175a5;
+  border-radius:5px;
+  border:0;
+  cursor:pointer;
+  color: #effffb;
+  font-size: 1.5rem;
+  padding-top:10px;
+  padding-bottom:10px;
+  transition: all 0.3s;
+  margin-top:-4px;
+  font-weight:700;
+}
+
+@media only screen and (max-width: 900px){
+    [type="submit"] {
+        font-size: 1.2rem;
+    }
+}
+
+/*Behind the scenes - The DOM section */
+#theDOM {
+    min-height: 580px;
+    background-color: #effffb;
+    margin-top: 500px;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    text-align: center;
+}
+
+#theDOM p {
+    max-width: 800px;
+    padding-bottom: 20px;
+}
+
+
+
+/*Behind the scenes - local storage section*/
+
+#localStorage {
+    min-height: 580px;
+    background-color: #50d890;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    text-align: center;
+}
+
+#localStorage p {
+    max-width: 800px;
+    padding-bottom: 20px;
+}
+
+/*Behind the scenes - references section*/
+
+#references {
+    min-height: 580px;
+    background-color: #effffb;
+    padding-top: 50px;
+    text-align: center;
+}
+
+.reference-list {
+    text-align: left;
+    font-family: 'Quicksand', sans-serif;
+    font-size: 1.2rem;
+    line-height: 1.5;
+}
+
+.reference-list li {
+    padding-bottom: 20px;
+}
+
+
+/*Media queries for Behind the scenes page*/
+@media only screen and (max-width: 900px){
+    #theDOM p, #localStorage p {
+        width: 90%;
+        font-size: 1rem;
+    }
+    #DOM-img {
+        width: 90%;
+    }
+    
+    .reference-list li {
+        font-size: 0.8rem;
+        width: 90%;
+        overflow: scroll;
+    }
+}
+
+
+
+
+/*Building the Tapas site - my process*/
+#my-process {
+    min-height: 580px;
+    background-color: #effffb;
+    margin-top: 500px;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    text-align: center;
+}
+
+.instructions-list {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: left;
+    font-family: 'Quicksand', sans-serif;
+    font-size: 1.2rem;
+    line-height: 1.5;
+}
+
+@media only screen and (max-width: 900px){
+    .instructions-list {
+        width: 95%;
+        padding-right: 35px;
+        font-size: 1rem;
+    }
+}
+
+.instructions-list li {
+    padding-bottom: 20px;
+}
+
+.JS-image {
+    display: block;
+    padding-top: 20px;
+}
+
+@media only screen and (max-width: 900px){
+    #JS-image3 {
+        max-width: 95%;
+    }
+}
+
+@media only screen and (max-width: 650px){
+    #JS-image1, #JS-image2, #JS-image4, #JS-image5, #JS-image6, #JS-image7 {
+        max-width: 95%;
+    }
+}
+
+.JS-image img:hover {
+    transform: scale(1.15);
+}
+
+@media only screen and (max-width: 720px){
+    .inst-image {
+        max-width: 95%;
+    }
+}
+
+/*Building the Tapas site - process video*/
+#process-video {
+    min-height: 580px;
+    background-color: #50d890;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    text-align: center;
+}
+
+video {
+    width: 800px;
+    height: 450px;
+}
+
+@media only screen and (max-width: 900px){
+    video {
+        width: 95%;
+        height: 90%;
+    }
+    #process-video {
+        min-height: 300px;
+        
+    }
+}
+
+/*Behind the scenes - JS effects page*/
+
+.JS-effects {
+    text-align: left;
+    max-width: 800px;
+    padding-left: 80px;
+    
+}
+
+
+
+@media screen and (max-width: 900px) {
+    .JS-effects {
+        max-width: 90%;
+        padding-left: 0;
+        text-align: justify;
+        font-size: 1rem;
+    }
+}
+
+/*Hamburger instructions*/
+#hamburger-div {
+    min-height: 580px;
+    background-color: #effffb;
+    margin-top: 500px;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    text-align: center;
+}
+
+
+/*image slider instructions*/
+#image-slider {
+    min-height: 580px;
+    background-color: #50d890;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    text-align: center;
+}
+
+
+/*lightbox instructions*/
+#lightbox-div {
+    min-height: 580px;
+    background-color: #effffb;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    text-align: center;
+}
+
+
+
+
+
+
+/* Footer Section */
+
+footer {
+    min-height: 50px;
+    background-color: #3175a5;
+    text-align: center;
+    color: #effffb;
+    padding-top: 20px;
+}
+
+footer p {
+    color: #effffb;
+}
+
+/*Media queries to control margin on about me section*/
+@media only screen and (max-width: 1160px){
+    #about-me, #my-process, #theDOM, #hamburger-div {
+        margin-top: 470px;
+    }
+}
+
+@media only screen and (max-width: 1090px){
+    #about-me, #my-process, #theDOM, #hamburger-div {
+        margin-top: 440px;
+    }
+}
+
+@media only screen and (max-width: 1000px){
+    #about-me, #my-process, #theDOM, #hamburger-div {
+        margin-top: 400px;
+    }
+}
+
+@media only screen and (max-width: 910px){
+    #about-me, #my-process, #theDOM, #hamburger-div {
+        margin-top: 350px;
+    }
+}
+
+@media only screen and (max-width: 800px){
+    #about-me, #my-process, #theDOM, #hamburger-div {
+        margin-top: 300px;
+    }
+}
+
+@media only screen and (max-width: 690px){
+    #about-me, #my-process, #theDOM, #hamburger-div {
+        margin-top: 250px;
+    }
+}
+
+@media only screen and (max-width: 580px){
+    #about-me, #my-process, #theDOM, #hamburger-div {
+        margin-top: 200px;
+    }
+}
+
+@media only screen and (max-width: 420px){
+    #about-me, #my-process, #theDOM, #hamburger-div {
+        margin-top: 150px;
+    }
+}

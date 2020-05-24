@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tapas - Behind the scenes</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=IM+Fell+French+Canon+SC&family=Quicksand&display=swap" rel="stylesheet">
+</head>
+<body>
+   <!--Navigation section--> 
+   <nav>
+       
+       
+       
+       
+       
+       <ul class="nav-links">
+        <li><a href="index.html" class="nav-link">Home</a></li>
+        <li><a href="#theDOM" class="nav-link">The DOM</a></li>
+        <li><a href="#localStorage" class="nav-link">Local Storage</a></li>
+        <li><a href="#references" class="nav-link">References</a></li>
+    </ul>
+    <div class="hamburger">
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+    </div>
+       
+   </nav>
+
+   <header>
+       <h1>Behind the Scenes</h1>
+       <hr>
+       <h2>Deep Dive into the DOM</h2>
+   </header>
+<!--The DOM extra information section-->
+   <div id="theDOM">
+       <h3>The DOM</h3>
+       <p>The DOM (short for Document Object Model) is a programming interface created from the HTML code when a browser loads. It is the standard way of accessing documents as defined by the World Wide Web Consortium (W3C). There are three parts to the DOM: Core, XML and HTML. They are standard models for different document types. Core is standards for all document types, XML is standard for XML documents and HTML is standard for HTML. Here we will focus mainly on the HTML DOM. 
+    </p>
+    <br>
+       <p>The DOM is a representation of your webpage and can be thought of like a family tree, where different HTML elements branch from one another in parent-child or sibling relationships. Each element in the DOM is called an object. The DOM also defines properties, methods and events for all HTML elements. </p>
+       <br>
+       <p>Everything in the DOM is also called a node. There are several types of nodes: the entire document is a document node, all HTML elements are element nodes and text inside the HTML are text nodes. Each node can have only one parent (except the root which has no parent) but any number of children or siblings. Siblings are nodes which share the same parent node.</p>
+       <br>
+       <img id="DOM-img" src="images/DOM.png" alt="An image of the Document Object Model tree"><br><br>
+       <p>The DOM can be used by Javascript (and other programming languages) to dynamically manipulate HTML nodes and change the look and behaviour of a page without having to reload the page every time. Javascript is able to access all nodes in the DOM and is able to add, remove and change the html elements themselves, or the properties applied to them. It can be used to modify HTML attributes and CSS styling. It can also react to HTML events.</p>
+       <br>
+       <p>There are several ways to access nodes in the DOM in order to manipulate them. Elements can be reached by id, tag name, class name, CSS selectors or HTML object collections. Dot notation is used to tell Javascript to traverse the DOM tree. Here is an example:
+    </p>
+    <br>
+       <p class="highlighted-sentence"><strong>document.getElementsByTagName(‘p’);</strong>
+    </p>
+    <br>
+       <p>This will search the document for all elements with the tag and return an array which can then be manipulated with Javascript.
+    </p>
+    <br>
+       <p>Javascript is also able to manipulate HTML through HTML events. Such events can include button clicks, keystrokes, mouse movement, page loading, and modification of input fields. Javascript can add ‘Event Listeners’ to these events so that when an event is triggered in the HTML the Javascript can then execute a piece of code which changes the HTML. These changes can include changes to CSS styles, addition of innerHTML to tags, addition or removal of HTML tags or changes to HTML attributes. It is even possible to create animations by using Javascript to manipulate the HTML DOM.
+    </p>
+   </div>
+
+   <!--Local Storage extra information section-->
+   <div id="localStorage">
+       <h3>Local Storage</h3>
+       <p>Local storage is a part of the DOM which allows information to be stored securely and directly in the client’s browser in the form of key-value pairs without the need for information being sent back and forth to a server. The information stored in local storage persists between browser sessions and does not expire. This means a page can remember what was previously added and is useful for both website customisation and performance reasons. Each site has a separate storage area.
+    </p>
+    <p>To access the local storage we use dot notation as follows:
+    </p>
+    <p><strong>window.localStorage;</strong></p>
+    <p>The local storage is read only and can only accept information stored in strings. Therefore, information stored in Javascript objects needs to be converted to a string using JSON and parsed back from string to object when being retrieved from local storage.
+    </p>
+    <p>There are four methods we can use to manipulate information in the local storage: <br>
+        <strong>.setItem()</strong> - adds information to the local storage <br>
+        <strong>.getItem()</strong> - retrieves information from the local storage <br>
+        <strong>.removeItem()</strong> - removes an item from the local storage <br>
+       <strong>.clear()</strong>  - removes all items stored in the local storage
+        </p>
+   </div>
+
+   
+   <!--Reference section--> 
+<div id="references">
+    <h3>References</h3>
+    <ol class="reference-list">
+        <li>MDN Web Docs, <strong> Introduction to the DOM </strong> (visited 06-04-2020) <br> <a href="https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model/Introduction"> https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model/Introduction </a>
+        </li>
+        <li>MDN Web Docs, <strong> window.localStorage</strong> (visited 06-04-2020) <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage">https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage</a></li>
+        <li>WHATWG, <strong>HTML Living Standard Chapter 11 - Web Storage</strong> (visited 06-04-2020) <a href="https://html.spec.whatwg.org/multipage/webstorage.html
+            ">https://html.spec.whatwg.org/multipage/webstorage.html
+        </a></li>
+        <li>W3Schools, <strong>Javascript HTML DOM</strong> (visited 06-04-2020) <a href="https://www.w3schools.com/js/js_htmldom.asp">https://www.w3schools.com/js/js_htmldom.asp</a></li>
+        <li>W3Schools, <strong>What is the HTML DOM</strong> (visited 06-04-2020) <a href="https://www.w3schools.com/whatis/whatis_htmldom.asp">https://www.w3schools.com/whatis/whatis_htmldom.asp</a></li>
+        <li>W3Schools,<strong> Window localStorage Property</strong> (visited 06-04-2020) <a href="https://www.w3schools.com/jsref/prop_win_localstorage.asp">https://www.w3schools.com/jsref/prop_win_localstorage.asp</a></li>
+    </ol>
+</div>
+
+   <!--Footer section--> 
+
+<footer>
+    <p>&copy; Emma Dawson 2020</p>
+</footer>
+
+<!--Link to scripts section--> 
+
+    <script src="scripts.js"></script>
+</body>
+</html>

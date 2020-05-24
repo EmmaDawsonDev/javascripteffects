@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Behind the scenes - Javascript Effects</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=IM+Fell+French+Canon+SC&family=Quicksand&display=swap" rel="stylesheet">
+</head>
+<body>
+    
+
+
+<!--Navigation section-->   
+<nav>
+    
+    <ul class="nav-links">
+        <li><a href="index.html" class="nav-link">Home</a></li>
+        <li><a href="#hamburger-div" class="nav-link">Hamburger Menu</a></li>
+        <li><a href="#image-slider" class="nav-link">Image Slider</a></li>
+        <li><a href="#lightbox-div" class="nav-link">Lightbox</a></li>
+    </ul>
+    <div class="hamburger">
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+    </div>
+    
+    
+
+
+</nav>
+
+
+<!--Header section--> 
+<header>
+    <h1>Behind the Scenes</h1>
+    <hr>
+    <h2>JS effects</h2>
+</header>
+
+<!--Hamburger menu explanation section--> 
+<div id="hamburger-div">
+    <h3>Hamburger menu</h3>
+    
+    <p class="JS-effects">A hamburger menu is a type of symbol often used on smaller screens so that the navigation doesn't take up too much space. The navigation links are 'hidden' and only appear when you click on the hamburger.</p>
+    <p class="JS-effects">I followed the following tutorial in order to create this effect: <a href="https://www.youtube.com/watch?v=gXkqy0b4M5g" target="_blank">Responsive Navigation Bar Tutorial</a></p>
+
+
+    <div class="instructions-list">
+        <ol>
+            <li><strong>Create a hamburger menu icon in HTML</strong><br>
+                Create the navigation links using an unordered list.
+                Then create three empty divs which will become the hamburger menu.
+                They can be placed before or after the navigation list depending on where you want the menu to show up.
+                These will be styled with CSS.
+                <span class="JS-image" ><img class="inst-image" src="images/hamburgerJS/hamburgerhtml.jpg" alt="HTML to create a hamburger menu icon"></span>
+            </li>
+            <li><strong>Style the navigation</strong><br>
+                Style the navigation so that the background and links are to your liking. 
+                Here is the styling I chose for mine:
+                <span class="JS-image" ><img class="inst-image" src="images/hamburgerJS/navCSS1.jpg" alt="CSS styles for navigation"></span>
+            </li>
+            <li><strong>Style the hamburger menu</strong><br>
+                The hamburger menu is styled by applying a background color to each of the divs within the hamburger.
+                It is set to display: none on larger screens so that it is not visible at the same time as the text links.
+                <span class="JS-image" ><img class="inst-image" src="images/hamburgerJS/navCSS2.jpg" alt="CSS styles for hamburger menu"></span>
+            </li>
+            <li><strong>Making the hamburger menu appear on smaller screens</strong><br>
+                This is done by using a media query which changes the styling on screens smaller than 768px (standard ipad size).
+                The position of the navigtion links is moved off the screen using the transform: translateX() property in CSS.
+                The hamburger menu is made visible.
+                <span class="JS-image" ><img class="inst-image" src="images/hamburgerJS/navCSS3.jpg" alt="Using a media query to change navigation styles on smaller screens"></span>
+            </li>
+            <li><strong>Adding an active class</strong><br>
+                In order to make the navigation appear when we click on the hamburger menu we create a class that will be added by Javascript.
+                This class is not attached to the HTML when the page loads so the navigation is hidden off screen.
+                When this class is added using Javascript it moves the links back onto the screen by changing the transform: translateX() property.
+                <span class="JS-image" ><img class="inst-image" src="images/hamburgerJS/navCSS4.jpg" alt="An active class to be added by Javascript"></span>
+            </li>
+            <li><strong>Adding the CSS class using Javascript</strong><br>
+                In order to add and remove the class to the HTML hamburger element we add an event listener using Javascript.
+                When the hamburger is clicked the first time, the active class is added and the navigation links are shown on screen.
+                When the hamburger is clicked a second time, the active class is removed and the links disappear from view again.
+                This is done using classList.toggle which toggles between adding and removing the class after every click.
+                <span class="JS-image" ><img class="inst-image" src="images/hamburgerJS/hamburgerJS.jpg" alt="Javascript to add/remove the CSS class to the HTML"></span>
+            </li>
+        </ol>
+    </div>
+</div>
+
+<!--Image slider explanation section--> 
+<div id="image-slider">
+    <h3>Image slider</h3>
+    <p class="JS-effects">An image slider is a way to display one photo at a time from a set of photos. It is also known as a carousel. They can be set up to advance on a button press or automatically after a set amount of time.</p>
+    <p class="JS-effects">I followed the following tutorial in order to create this effect: 
+        <a href="https://www.youtube.com/watch?v=KcdBOoK3Pfw&t=56s" target="_blank">How to create an Image Slider in HTML, CSS and Javascript</a></p>
+
+    <div class="instructions-list">
+        <ol>
+            
+            <li><strong>Adding the images in HTML</strong><br>
+                Add all the images you want included in the html using the img tag.
+                Include two buttons, one to move the slideshow forwards and one to move it backwards.
+                These can be buttons or can be icons that you style.
+                In this projects I used arrow symbols from Font Awesome.
+                The buttons can be placed above or below the images as preferred.
+                They can then be styled and positioned using CSS.
+                The first and last images are included twice, with ids of first-clone and last-clone respectively.
+                This is so that the slider can loop infinitely through the images and will be targeted later with Javascript.
+                <span class="JS-image" ><img class="inst-image" src="images/slider-instructions/sliderhtml.jpg" alt="HTML to show how images are added to an image carousel"></span>
+            </li>
+            <li><strong>Style the image slider and images</strong><br>
+                Style the image slider container and images using CSS.
+                You can play around with the height and width until you are happy with the result and the images display correctly.
+                The images are displayed as flex so that they sit side by side across the page instead of down.
+                The overflow: hidden property makes sure that just one image is seen at a time.
+                <span class="JS-image" ><img class="inst-image" src="images/slider-instructions/sliderCSS1.jpg" alt="CSS styles for image carousel"></span>
+            </li>
+            <li><strong>Style the buttons</strong><br>
+                This is the styling I used to position the arrows over the image slider.
+                You can play around with the sizing and colors until you are happy with it.
+                <span class="JS-image" ><img class="inst-image" src="images/slider-instructions/sliderCSS2.jpg" alt="CSS styles for previous and next buttons"></span>
+            </li>
+            <li><strong>Selecting the different elements of the slider</strong><br>
+                We use query selectors to find the HTML elements we want to manipulate using Javascript.
+                We set a counter so that it keeps track of which image is showing.
+                <span class="JS-image" ><img class="inst-image" src="images/slider-instructions/sliderJS1.jpg" alt="Query selectors to target specific elements from html"></span>
+            </li>
+            <li><strong>Add event listeners to the buttons</strong><br>
+                We want the images to change when we click on the next or previous buttons.
+                To do this we add event listeners to both buttons so that when they are clicked something happens.
+                When you click on the 'next' button the counter increases by 1 and the image moves forward by one.
+                When you click on the 'previous' button the counter decreases by 1 and the image moves backwards by one.
+                The if statements stop the carousel from showing empty if the buttons are clicked too fast that the carousel can't keep up.
+                <span class="JS-image"><img class="inst-image" src="images/slider-instructions/sliderJS2.jpg" alt="Event listeners and functions added to the buttons using Javascript"></span>
+            </li>
+            <li><strong>Looping the image slider</strong><br>
+                This Javascript targets the cloned images in the HTML with the id of first-clone and last-clone.
+                The Javascript adds an event listener which is triggered when a transition ends.
+                If the image has an id of last-clone, it will hop back to the last image.
+                We do counter = carouselImages.length - 2 so that it hops over the first-clone and back to the last original image in the HTML.
+                If the image has the id of first-clone, it hops back to the first image.
+                By doing this it appears that the images loop infinitely, when in reality it is just jumping back to the start of the image slider.
+                <span class="JS-image" ><img class="inst-image" src="images/slider-instructions/sliderJS3.jpg" alt="Javascript to loop the carousel"></span>
+            </li>
+        </ol>
+    </div>
+</div>
+
+<!--Lightbox explanation section--> 
+<div id="lightbox-div">
+    <h3>Lightbox</h3>
+    <p class="JS-effects">Lightbox is another technique for displaying images. 
+    It means you can show many images together side by side as thumbnails. 
+    When an image is clicked on you see just that one image in its original size.</p>
+    <p class="JS-effects">I followed the following tutorial in order to create this effect: 
+        <a href="https://www.youtube.com/watch?v=uKVVSwXdLr0" target="_blank">Simple Image Lightbox Tutorial</a></p>
+    <div class="instructions-list">
+        <ol>
+            <li><strong>Adding the images using HTML</strong><br>
+                It is very simple to create the image gallery for the lightbox technique. 
+                Simply place all your images inside a div.
+                <span class="JS-image" ><img class="inst-image" src="images/lightbox-instructions/lightboxhtml.jpg" alt="Adding images to a lightbox effect with HTML"></span>
+            </li>
+            <li><strong>Styling the images with CSS</strong><br>
+                Style the images as you want them to appear on the page when viewed in thumbnail form.
+                The size here will not affect the size that the image is shown in the lightbox.
+                <span class="JS-image" ><img class="inst-image" src="images/lightbox-instructions/lightboxCSS1.jpg" alt="Styling images with CSS"></span>
+            </li>
+            <li><strong>Styling the lightbox with CSS</strong><br>
+                We create an id in CSS called lightbox.
+                This will be added to the gallery using Javascript.
+                Style the lightbox background and images so that they appear how you want them to. You can experiment with background color and borders for example.
+                The lightbox should have a fixed position show that it shows over the entire page.
+                The z-index should be high so that it is shown on top of everything else.
+                The display is set to none because we don't want the lightbox to show all the time.
+                <span class="JS-image" ><img class="inst-image" src="images/lightbox-instructions/lightboxCSS2.jpg" alt="CSS to style the lightbox effect"></span>
+            </li>
+            <li><strong>Making the lightbox active with Javascript</strong><br>
+                The first thing we do here is create a new div element, give it the id of lightbox and append it to the body of the HTML document.
+                We then select all the images on the page using a query selector and add an event listener to each one.
+                The event listener adds a class of active to the lightbox div so that the lightbox effect is made visible.
+                It uses the same image source as the image that was clicked.
+                The while loop is included so that only one image is shown in the lightbox at a time. The while loop removes the previous image that was shown.
+                Finally we add an event listener to the lightbox so that if it is clicked the active class is removed and the lightbox closes.
+                <span class="JS-image" ><img class="inst-image" src="images/lightbox-instructions/lightboxJS.jpg" alt="Javascript to add the lightbox active class."></span>
+            </li>
+            
+        </ol>
+    </div>
+</div>
+
+<!--Footer section--> 
+
+<footer>
+    <p>&copy; Emma Dawson 2020</p>
+</footer>
+
+<script src="scripts.js"></script>
+</body>
+</html>
